@@ -1,76 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="�Secret:" content="width=device-width">
-        <meta name="description" content=none>
-        <title>�Secret!�</title>
-        
-        <style>
-            body{
-                padding: 0px;
-                margin: 0px;
-                background-color: whitesmoke;
-            }
-            img{
-            justify-content: center;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Secret!</title>
+    <script>alert("Hello")</script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: whitesmoke;
             display: flex;
-            position: absolute;
-            height: 500px;
-            width: 500px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img {
+            height: 400px;
+            width: 400px;
             border-radius: 50%;
-            top: 50px;
-            right: 50px;
-            }
-            p{
-                color: black;
-                font-weight: bold;
-            }
-            h1{
-                font-size: large;
-                color: black;
-            }
-            button{
-                padding: 12px 30px;
-                border: 1px solid transparent;
-                margin: 150px auto;
-                cursor: pointer;
-                display: flex;
-                box-shadow: 0 0 5px cyan 0 0 25px cyan;
-                text-align: center;
-                background-color: black;
-                color: wheat;
-                border: forestgreen;
-                font-size: large;
-                cursor: pointer;
-                transition: 1.5;
-                right: 10px;
-            }
-            button:hover{
-                box-shadow: 0 0 5px cyan,
-                0 0 25px green, 0 0 50px green,
-                0 0 100px cyan, 0 0 200px green;
-                animation: pulsate 1s;
-                background-color: cyan;
-                color: black;
-                transition: 10s;
-            }
-            @keyframes pulsate{
-            0%{
-                box-shadow:
-                0 0 25px cyan,
-                0 0 50px purple;
+        }
+        p {
+            color: pink;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: large;
+            color: pink;
+        }
+        button {
+            padding: 12px 30px;
+            border: 2px solid cherry;
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            box-shadow: 0 0 5px pink, 0 0 25px pink;
+            text-align: center;
+            background-color: black;
+            color: wheat;
+            font-size: large;
+            border-radius: 12px;
+            transition: 1s;
+        }
+        button:hover {
+            box-shadow: 0 0 5px pink, 0 0 25px pink, 0 0 50px red, 0 0 100px pink, 0 0 200px red;
+            animation: pulsate 1s;
+            background-color: pink;
+            color: black;
+            transition: 3s;
+        }
+        @keyframes pulsate {
+            0% {
+                box-shadow: 0 0 25px pink, 0 0 50px purple;
             }
         }
-        </style>
-
-    </head>
-    <body background="images/galaxy.jpg">
-        <img src="images/picture.jpeg" alt="images/altpicture.png">
-        <h1><strong>Who is this person?</strong></h1>
-        <p>I <strong>Dont</strong> Know</p>
-        <p>Click Below...</p>
-        <p></p>
-    </body>
-    <button onclick=location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Learn More</button>
+    </style>
+</head>
+<body background="images/galaxy1.jpg">
+    <img src="images/picture.jpeg" alt="images/altpicture/jpeg">
+    <h1>Name:   <strong>[ ........ ]</strong></h1>
+    <p><br></br>Click Below...</p>
+    <button onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Learn More</button>
+</body>
 </html>
+
