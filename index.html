@@ -16,19 +16,18 @@
             height: 100vh;
             overflow: hidden;
             position: relative;
+            background-image: url('images/galaxy1.jpg');
+            background-size: cover;
+            background-position: center;
         }
-        img {
-            height: 400px;
-            width: 400px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2; /* Higher z-index */
-        }
-        p {
-            color: pink;
-            font-weight: bold;
-            z-index: 2; /* Higher z-index */
-            position: relative;
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0; /* Background video */
         }
         h1 {
             font-size: large;
@@ -39,9 +38,16 @@
             position: relative;
         }
         .logo {
-            height: 50px; /* Adjust height as needed */
-            width: auto; /* Maintain aspect ratio */
-            margin-right: 10px; /* Space between logo and text */
+            height: 50px;
+            width: 50px; /* Set width for circular shape */
+            border-radius: 50%; /* Circular shape */
+            margin-right: 10px;
+        }
+        p {
+            color: pink;
+            font-weight: bold;
+            z-index: 2; /* Higher z-index */
+            position: relative;
         }
         button {
             padding: 12px 30px;
@@ -129,10 +135,12 @@
         }
     </style>
 </head>
-<body background="images/galaxy1.jpg">
+<body>
+    <video autoplay muted loop>
+        <source src="images/Rizz-01.mp4" type="video/mp4">
+    </video>
     <div class="snowfall"></div>
     <div class="greeting">Welcome!</div>
-    <img src="images/picture.jpeg" alt="images/altpicture/jpeg">
     <h1>
         <img src="images/logo.jpg" alt="Logo" class="logo">
         Name: <strong>[ ........ ]</strong>
