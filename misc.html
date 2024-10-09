@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nothing🙄</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: pink;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 2s;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            opacity: 0;
+            animation: slideIn 1s forwards 0.5s;
+        }
+        p {
+            font-size: 2em;
+            margin-top: 20px;
+            opacity: 0;
+            animation: slideIn 1s forwards 1s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Nothing to see here</h1>
+        <p>Come back on 8 December!</p>
+    </div>
+</body>
+</html>
+
