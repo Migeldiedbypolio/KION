@@ -31,12 +31,18 @@
             z-index: 0; /* Background video */
         }
         h1 {
-            font-size: large;
+            font-size: 2em;
             color: pink;
             display: flex;
             align-items: center;
-            z-index: 2; /* Higher z-index */
+            z-index: 2;
             position: relative;
+	   }
+	h1, p, button {
+	    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+	    		 0 0 25px rgba(0, 255, 255, 0.5),
+			 0 0 30px rgba(0, 255, 255, 0.5),
+			 0 0 40px rgba(0, 255, 255, 0.5);
         }
         .logo {
             height: 50px;
@@ -47,7 +53,8 @@
         p {
             color: pink;
             font-weight: bold;
-            z-index: 2; /* Higher z-index */
+            z-index: 2;
+	    font-size: 2em;
             position: relative;
         }
         button {
