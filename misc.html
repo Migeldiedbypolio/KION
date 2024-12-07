@@ -1,50 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nothing🙄</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Secret!</title>
     <style>
         body {
+            padding: 0;
             margin: 0;
-            height: 100vh;
+            background-color: whitesmoke;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: pink;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
+            height: 100vh;
             overflow: hidden;
-            animation: fadeIn 2s;
+            position: relative;
+            background-image: url('images/galaxy1.jpg');
+            background-size: cover;
+            background-position: center;
+	    cursor: url("images/curosr.png"), auto;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
         h1 {
-            font-size: 4em;
-            margin: 0;
-            opacity: 0;
-            animation: slideIn 1s forwards 0.5s;
+            color: green;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+	   }
+	h1, p, button {
+	    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+	    		 0 0 25px rgba(0, 255, 255, 0.5),
+			 0 0 30px rgba(0, 255, 255, 0.5),
+			 0 0 40px rgba(0, 255, 255, 0.5);
+        }
+        .logo {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+	    box-shadow: 0 0 5px white, 0 0 25px cyan;
+            margin-right: 10px;
         }
         p {
-            font-size: 2em;
+            color: pink;
+            font-weight: bold;
+            z-index: 2;
+	    font-size: 2em;
+            position: relative;
+        }
+        a {
+            padding: 12px 30px;
+            border: 2px solid white;
             margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 1), 0 0 30px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 105, 180, 0.6);
+            text-align: center;
+            background-color: white;
+            color: wheat;
+            font-size: large;
+            border-radius: 12px;
+            transition: 1s;
+            z-index: 2;
+            position: relative;
+        }
+        button:hover {
+            scale: 1.2;
+            box-shadow: 0 0 5px pink, 0 0 25px pink, 0 0 50px red, 0 0 100px pink, 0 0 200px red;
+            animation: pulsate 1s;
+            background-color: pink;
+            color: black;
+            transition: 3s;
+        }
+        @keyframes pulsate {
+            0% {
+                box-shadow: 0 0 25px pink, 0 0 50px purple;
+            }
+        }
+        .snowfall {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+	    box-shadow: 0 0 5px white, 0 0 25px cyan;
+            z-index: 1;
+        }
+        .snowflake {
+            position: absolute;
+            top: -5px;
+            background: white;
+            opacity: 0.8;
+            border-radius: 50%;
+	    box-shadow: 0 0 5px white, 0 0 25px white;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+        .greeting {
+            position: absolute;
+	    border-radius: 5px;
+	    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+            top: 5%;
+            font-size: 2.6em;
+            color: white;
             opacity: 0;
-            animation: slideIn 1s forwards 1s;
+            animation: fadeIn 0.5s forwards, disappear 1s 1.5s forwards;
         }
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
-        @keyframes slideIn {
-            0% { transform: translateY(-50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+        @keyframes disappear {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Nothing to see here🙄</h1>
-        <p>Maybe come again in December 8?</p>
-    </div>
+    <video autoplay loop>
+        <source src="images/ANightToRemember.mp4" /*type="video/mp4"*/>
+    </video>
+    <div class="snowfall"></div>
+    <div class="greeting">Happy Birthday!🥳</div>
+    <h1>
+        <img src="images/logo.jpg" alt="Logo" class="logo">
+    </h1>
+    <p><br></br>Secret File</p>
+    <a href="images/BDAY.py" download>secret</a>
+    <script>
+        function createSnowflakes(count) {
+            const snowfall = document.querySelector('.snowfall');
+            for (let i = 0; i < count; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                const size = 5;
+                const leftPosition = Math.random() * 100;
+                const duration = Math.random() * 8 + 5;
+                const delay = Math.random() * 3;
+
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${leftPosition}vw`;
+                snowflake.style.animationDuration = `${duration}s`;
+                snowflake.style.animationDelay = `${delay}s`;
+
+                snowfall.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes(100);
+    </script>
 </body>
 </html>
 
