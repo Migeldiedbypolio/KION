@@ -153,7 +153,7 @@
         Name: <strong>[ ........ ]</strong>
     </h1>
     <p><br></br>Click Below...</p>
-    <button onclick="location.href='misc.html'">Learn More</button>
+    <button onclick="setTimeout(function(){ window.location.href='misc.html'; }, 3000)">Learn More</button>
     <script>
         function createSnowflakes(count) {
             const snowfall = document.querySelector('.snowfall');
@@ -164,7 +164,6 @@
                 const leftPosition = Math.random() * 100;
                 const duration = Math.random() * 8 + 5;
                 const delay = Math.random() * 3;
-
                 snowflake.style.width = `${size}px`;
                 snowflake.style.height = `${size}px`;
                 snowflake.style.left = `${leftPosition}vw`;
